@@ -1,12 +1,12 @@
 import React from 'react';
-
+import './index.css'
 export default ()=>(
 <div className="navbar-inner">
 		<div className="container">
-			<nav className="navbar navbar-expand-lg navbar-light bg-light">
+			<nav className="navbar navbar-expand-lg">
 				
 				<div className="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul className="navbar-nav ml-auto text-center mr-xl-5">
+					<ul className="navbar-nav  text-center mr-xl-5">
 						<li className="nav-item active mr-lg-2 mb-lg-0 mb-2">
 							<a className="nav-link" href="index.html">Home
 								<span className="sr-only">(current)</span>
