@@ -1,5 +1,7 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './index.css'
+
 export default ()=>(
 <div className="navbar-inner">
 		<div className="container">
@@ -7,11 +9,7 @@ export default ()=>(
 				
 				<div className="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul className="navbar-nav  text-center mr-xl-5">
-						<li className="nav-item active mr-lg-2 mb-lg-0 mb-2">
-							<a className="nav-link" href="index.html">Home
-								<span className="sr-only">(current)</span>
-							</a>
-						</li>
+						
 						<li className="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
 							<a className="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								Electronics
@@ -23,57 +21,41 @@ export default ()=>(
 										<div className="col-sm-6 multi-gd-img">
 											<ul className="multi-column-dropdown">
 												<li>
-													<a href="product.html">All Mobile Phones</a>
+													<Link to='#'>All Mobile Phones</Link>
 												</li>
 												<li>
-													<a href="product.html">All Mobile Accessories</a>
+													<Link to='#'>All Mobile Accessories</Link>
 												</li>
+												
+												
 												<li>
-													<a href="product.html">Cases & Covers</a>
+													<Link to='#'>Power Banks</Link>
 												</li>
+												
 												<li>
-													<a href="product.html">Screen Protectors</a>
+													<Link to='#'>Tablets</Link>
 												</li>
-												<li>
-													<a href="product.html">Power Banks</a>
-												</li>
-												<li>
-													<a href="product.html">All Certified Refurbished</a>
-												</li>
-												<li>
-													<a href="product.html">Tablets</a>
-												</li>
-												<li>
-													<a href="product.html">Wearable Devices</a>
-												</li>
-												<li>
-													<a href="product.html">Smart Home</a>
-												</li>
+												
 											</ul>
 										</div>
 										<div className="col-sm-6 multi-gd-img">
 											<ul className="multi-column-dropdown">
 												<li>
-													<a href="product.html">Laptops</a>
+													<Link to='#'>Laptops</Link>
 												</li>
 												<li>
-													<a href="product.html">Drives & Storage</a>
+													<Link to='#'>Drives & Storage</Link>
 												</li>
 												<li>
-													<a href="product.html">Printers & Ink</a>
+													<Link to='#'>Printers & Ink</Link>
 												</li>
 												<li>
-													<a href="product.html">Networking Devices</a>
+													<Link to='#'>etworking Devices</Link>
 												</li>
 												<li>
-													<a href="product.html">Computer Accessories</a>
+													<Link to='#'>Computer Accessories</Link>
 												</li>
-												<li>
-													<a href="product.html">Game Zone</a>
-												</li>
-												<li>
-													<a href="product.html">Software</a>
-												</li>
+												
 											</ul>
 										</div>
 									</div>
@@ -91,62 +73,62 @@ export default ()=>(
 										<div className="col-sm-6 multi-gd-img">
 											<ul className="multi-column-dropdown">
 												<li>
-													<a href="product2.html">Televisions</a>
+													<Link to='#'>Televisions</Link>
 												</li>
 												<li>
-													<a href="product2.html">Home Entertainment Systems</a>
+													<Link to='#'>Home Entertainment Systems</Link>
 												</li>
 												<li>
-													<a href="product2.html">Headphones</a>
+													<Link to='#'>Headphones</Link>
 												</li>
 												<li>
-													<a href="product2.html">Speakers</a>
+													<Link to='#'>Speakers</Link>
 												</li>
 												<li>
-													<a href="product2.html">MP3, Media Players & Accessories</a>
+													<Link to='#'>MP3, Media Players & Accessories</Link>
 												</li>
 												<li>
-													<a href="product2.html">Audio & Video Accessories</a>
+													<Link to='#'>Audio & Video Accessories</Link>
 												</li>
 												<li>
-													<a href="product2.html">Cameras</a>
+													<Link to='#'>Cameras</Link>
 												</li>
 												<li>
-													<a href="product2.html">DSLR Cameras</a>
+													<Link to='#'>DSLR Cameras</Link>
 												</li>
 												<li>
-													<a href="product2.html">Camera Accessories</a>
+													<Link to='#'>Camera Accessories</Link>
 												</li>
 											</ul>
 										</div>
 										<div className="col-sm-6 multi-gd-img">
 											<ul className="multi-column-dropdown">
 												<li>
-													<a href="product2.html">Musical Instruments</a>
+													<Link to='#'>Musical Instruments</Link>
 												</li>
 												<li>
-													<a href="product2.html">Gaming Consoles</a>
+													<Link to='#'>Gaming Consoles</Link>
 												</li>
 												<li>
-													<a href="product2.html">All Electronics</a>
+													<Link to='#'>All Electronics</Link>
 												</li>
 												<li>
-													<a href="product2.html">Air Conditioners</a>
+													<Link to='#'>Air Conditioners</Link>
 												</li>
 												<li>
-													<a href="product2.html">Refrigerators</a>
+													<Link to='#'>Refrigerators</Link>
 												</li>
 												<li>
-													<a href="product2.html">Washing Machines</a>
+													<Link to='#'>Washing Machines</Link>
 												</li>
 												<li>
-													<a href="product2.html">Kitchen & Home Appliances</a>
+													<Link to='#'>Kitchen & Home Appliances</Link>
 												</li>
 												<li>
-													<a href="product2.html">Heating & Cooling Appliances</a>
+													<Link to='#'>Heating & Cooling Appliances</Link>
 												</li>
 												<li>
-													<a href="product2.html">All Appliances</a>
+													<Link to='#'>All Appliances</Link>
 												</li>
 											</ul>
 										</div>
@@ -155,7 +137,7 @@ export default ()=>(
 							</div>
 						</li>
 						<li className="nav-item mr-lg-2 mb-lg-0 mb-2">
-							<a className="nav-link" href="product.html">New Arrivals</a>
+							<Link className="nav-link" to="#">New Arrivals</Link>
 						</li>
 						
 						

@@ -19,3 +19,13 @@
 .promotionalHeaderRight ul li i {
 	font-size: 15px;
 }
+.location-btn {
+	background: none;
+	font-size: 13px;
+	letter-spacing: 1px;
+}
+.location-btn:hover,
+.location-btn:active {
+	background: none;
+	outline: 0;
+}

@@ -36,7 +36,7 @@
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.22);
     padding: 10px;
 }
-button.w3view-cart {
+a.w3view-cart {
     font-size: 20px;
     color: #fff;
     width: 50px;

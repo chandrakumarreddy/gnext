@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {Button} from "react-bootstrap";
+import Location from '../Location';
 import "./index.css";
 
-export default () => (
+export default ({showLocationModel}) => (
 	<div className="agile-main-top">
 		<div className="container-fluid">
 			<div className="row promotionalBackground py-2">
@@ -15,10 +17,11 @@ export default () => (
 				<div className="col-lg-8 promotionalHeaderRight mt-lg-0 mt-2 mr-0">
 					<ul>
 						<li className="text-center border-right text-white">
-							<Link className=" text-white" to="#">
+							<Button className=" text-white border-0 location-btn" onClick={()=>showLocationModel(true)}>
 								<i className="fas fa-map-marker mr-2" />
 								Select Location
-							</Link>
+							</Button>
+							<Location/>
 						</li>
 						<li className="text-center border-right text-white">
 							<Link to="#" className="text-white">

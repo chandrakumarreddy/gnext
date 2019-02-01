@@ -5,7 +5,7 @@ import routes from '../routes';
 export default ()=>(
 <BrowserRouter>
 <Switch>
-{routes.map(route=> <Route path='/' component={route.component} key={route.id}/>)}
+{routes.map(route=> <Route path='/' component={route.component} key={route.id} exact={route.exact && true}/>)}
 </Switch>
 </BrowserRouter>
 	)

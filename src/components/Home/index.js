@@ -7,11 +7,11 @@ import HeroContentBlock from "../HeroContentBlock";
 const HomeComponent = props => {
 	return (
 		<div>
-			<Promotions />
+			<Promotions {...props}/>
 			<Header/>
 			<Navigation/>
-			<div className="row">
-			<div className="col-lg-8">
+			<div className="container-fluid row">
+			<div className=" col-lg-12">
 					<HeroContentBlock />
 			</div>
 			</div>

@@ -1,3 +1,3 @@
 import {combineReducers} from 'redux';
-
-export default combineReducers({}) 
+import showLocation from './showLocationReducer';
+export default combineReducers({showLocation}) 

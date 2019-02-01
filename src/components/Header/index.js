@@ -2,7 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./index.css";
 
-export default () => (
+export default () => {
+const handleSubmit=(e)=>{
+e.preventDefault();
+}
+	return (
 	<div className="header-bot">
 		<div className="container">
 			<div className="row header-bot_inner_wthreeinfo_header_mid">
@@ -21,7 +25,7 @@ export default () => (
 				<div className="col-md-9 header mt-4 mb-md-0 mb-4">
 					<div className="row">
 						<div className="col-10 agileits_search">
-							<form className="form-inline">
+							<form className="form-inline" onSubmit={handleSubmit}>
 								<input
 									className="form-control mr-sm-2"
 									type="search"
@@ -38,14 +42,12 @@ export default () => (
 						</div>
 						<div className="col-2 top_nav_right text-center mt-sm-0 mt-2">
 							<div className="wthreecartaits wthreecartaits2 cart cart box_1">
-								<button
+								<Link
 									className="btn w3view-cart"
-									type="submit"
-									name="submit"
-									value=""
+									to='/cart'
 								>
 									<i className="fas fa-cart-arrow-down" />
-								</button>
+								</Link>
 							</div>
 						</div>
 					</div>
@@ -53,4 +55,4 @@ export default () => (
 			</div>
 		</div>
 	</div>
-);
+)};
