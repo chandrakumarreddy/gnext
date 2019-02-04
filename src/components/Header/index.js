@@ -17,6 +17,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Drawer from '@material-ui/core/Drawer';
 import {Link} from 'react-router-dom';
 import Location from '../Location';
+import NavigationMenu from '../Navigation';
 import './index.css';
 
 const styles = theme => ({
@@ -30,6 +31,7 @@ const styles = theme => ({
     marginLeft: -12,
     display:'none',
     color:'#000',
+    fontSize:"30px",
     [theme.breakpoints.down('sm')]: {
       display: 'block',
     }
@@ -80,10 +82,10 @@ const styles = theme => ({
     paddingLeft: theme.spacing.unit * 4,
     transition: theme.transitions.create('width'),
     width: '100%',
+    backgroundColor:'#fff',
     [theme.breakpoints.up('sm')]: {
       width: 500,
       "&:focus":{
-        backgroundColor:'#fff',
         border:"1px solid rgba(0,0,0,0.1)"
       }
     },
@@ -91,16 +93,14 @@ const styles = theme => ({
           paddingTop: theme.spacing.unit,
           paddingBottom: theme.spacing.unit,
           "&:focus":{
-              backgroundColor:'#fff',
               border:"1px solid rgba(0,0,0,0.1)"
        },
     },
     borderRadius:'3px',
-    backgroundColor:'#F2F3F5'
-  },
-  appBar:{
-    backgroundColor:"#fff",
-    boxShadow: "none"
+},
+appBar:{
+    backgroundColor:"darkOrange",
+    boxShadow: "none",
   },
   signin:{
     fill:'#000',
@@ -112,9 +112,27 @@ const styles = theme => ({
   cart:{
     fill:'#000',
     margin:"0 15px",
-     [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('sm')]: {
       margin:'0 10px'
     }
+  },
+  logo:{
+    width:'60px',
+    height:'60px'
+  },
+  toolBar:{
+    minHeight:'70px',
+    [theme.breakpoints.down('sm')]: {
+        minHeight:'65px',
+      }
+  },
+  NavigationMenu:{
+    padding:"0",
+    backgroundColor:'#fff',
+    minHeight:'40px',
+    [theme.breakpoints.down('sm')]: {
+        display: 'none',
+      }
   }
 });
 
@@ -149,13 +167,16 @@ function SearchAppBar(props) {
   <>
     <div className={classes.root}>
       <AppBar position="fixed" className={classes.appBar}>
-        <Toolbar>
+        <Toolbar className={classes.toolBar}>
           <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer" onClick={toggleDrawer}>
             <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" color="inherit" >
-            <Link to='/'>DS</Link>
+            <Link to='/'>
+                <img src="/assets/images/logo.png" alt="logo" className={classes.logo}/>
+            </Link>
           </Typography>
+
           <Location/>
           <div className={classes.grow} />
           <div className={classes.search}>
@@ -172,14 +193,15 @@ function SearchAppBar(props) {
           </div>
           <div>
               <i className={`material-icons ${classes.signin}`}>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 18 18"><path d="M9 1C4.58 1 1 4.58 1 9s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 2.75c1.24 0 2.25 1.01 2.25 2.25S10.24 8.25 9 8.25 6.75 7.24 6.75 6 7.76 3.75 9 3.75zM9 14.5c-1.86 0-3.49-.92-4.49-2.33C4.62 10.72 7.53 10 9 10c1.47 0 4.38.72 4.49 2.17-1 1.41-2.63 2.33-4.49 2.33z"/></svg> 
+                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 18 18"><path d="M9 1C4.58 1 1 4.58 1 9s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 2.75c1.24 0 2.25 1.01 2.25 2.25S10.24 8.25 9 8.25 6.75 7.24 6.75 6 7.76 3.75 9 3.75zM9 14.5c-1.86 0-3.49-.92-4.49-2.33C4.62 10.72 7.53 10 9 10c1.47 0 4.38.72 4.49 2.17-1 1.41-2.63 2.33-4.49 2.33z"/></svg> 
               </i>
           </div>
           <div>
               <i className={`material-icons ${classes.cart}`}>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>                
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>                
               </i>
           </div>
+          
           <Drawer open={open} onClose={toggleDrawer}>
             <div
               tabIndex={0}
@@ -190,6 +212,9 @@ function SearchAppBar(props) {
               {sideList}
             </div>
         </Drawer>
+        </Toolbar>
+        <Toolbar className={classes.NavigationMenu}>
+            <NavigationMenu/>
         </Toolbar>
       </AppBar>
     </div>

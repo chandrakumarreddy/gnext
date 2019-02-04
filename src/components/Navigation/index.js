@@ -5,9 +5,7 @@ import './index.css';
 
 const styles = theme => ({
 	NavigationMenu:{
-		 [theme.breakpoints.down('sm')]: {
-	      display: 'none',
-	    }
+		width:'100%'
 	}
 })
 
