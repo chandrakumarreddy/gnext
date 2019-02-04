@@ -1,22 +1,13 @@
-import React from "react";
-import Promotions from "../Promotions";
-import Header from '../Header';
-import Navigation from '../Navigation';
-import HeroContentBlock from "../HeroContentBlock";
+import React from 'react';
+import Featured from '../Featured';
 
-const HomeComponent = props => {
-	return (
-		<div>
-			<Promotions {...props}/>
-			<Header/>
-			<Navigation/>
-			<div className="container-fluid row">
-			<div className=" col-lg-12">
-					<HeroContentBlock />
-			</div>
-			</div>
-		</div>
-	);
-};
+const HomeComponent = (props) => {
+  return (
+    <div>
+    <Featured/>
+    <h3>Featured products</h3>
+    </div>
+  )
+}
 
 export default HomeComponent;

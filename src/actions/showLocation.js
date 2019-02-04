@@ -1,1 +1,0 @@
-export  const LocationPopup= (display)=>({type:"SHOWLOCATION", payload:display})
