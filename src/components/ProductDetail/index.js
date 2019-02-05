@@ -49,10 +49,10 @@ const ProductDetailComponent = props => {
 	return (
 		<div className="productDetailComponent">
 			<Grid container>
-				<Grid lg={6} xs={12} item>
+				<Grid lg={6} sm={6} xs={12} item>
 					<ImageGallery items={images} autoPlay={false} thumbnailPosition="left" showPlayButton={false} showNav={false}/>
 				</Grid>
-				<Grid lg={6} xs={12} item>
+				<Grid lg={6} sm={6} xs={12} item>
 					<p className={classes.producttitle}>
 						Apple - MacBook Air - 13.3" Retina Display - Intel Core
 						i5 - 8GB Memory - 128GB Flash Storage (Latest Model) -
