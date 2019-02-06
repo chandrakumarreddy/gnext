@@ -5,19 +5,19 @@ const styles = theme => ({
   location:{
   	display:'flex',
   	flexDirection:"row",
-  	fill:'#fff',
+  	fill:'#000',
   	padding:"2px 5px 0 10px",
   	[theme.breakpoints.down('sm')]: {
       display: 'none',
     }
   },
   shopText:{
-	color:"#fff",
-	fontSize:"12px"
+  	color:"#0084CD",
+  	fontSize:"12px"
   },
  shopLocation:{
- 	color:"#000",
- 	fontWeight:"bold"
+   	color:"#000",
+   	fontWeight:"bold"
  }
 });
 

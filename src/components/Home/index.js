@@ -20,7 +20,7 @@ itemContainer:{
 const HomeComponent = (props) => {
   const {classes}=props;
   return (
-    <div className={classes.HomeComponent}>
+    <div className={`${classes.HomeComponent} componentContainer`}>
     <Grid container spacing={16}>
     <Grid item lg={12} xs={12}>
     <Featured/>

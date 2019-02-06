@@ -21,9 +21,6 @@ import NavigationMenu from '../Navigation';
 import './index.css';
 
 const styles = theme => ({
-  root: {
-    width: '100%',
-  },
   grow:{
   flexGrow:1
   },
@@ -67,9 +64,10 @@ const styles = theme => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    color:"red",
+    color:"#fff",
     right:0,
-    fill:'red'
+    backgroundColor:'#0084CD',
+    borderRadius:"0 3px 3px 0px"
   },
   inputRoot: {
     color: '#000',
@@ -83,24 +81,20 @@ const styles = theme => ({
     transition: theme.transitions.create('width'),
     width: '100%',
     backgroundColor:'#fff',
+    border:"1px solid rgba(0,0,0,0.1)",
     [theme.breakpoints.up('sm')]: {
       width: 500,
-      "&:focus":{
-        border:"1px solid rgba(0,0,0,0.1)"
-      }
     },
     [theme.breakpoints.down('sm')]: {
           paddingTop: theme.spacing.unit,
           paddingBottom: theme.spacing.unit,
-          "&:focus":{
-              border:"1px solid rgba(0,0,0,0.1)"
-       },
+        
     },
     borderRadius:'3px',
 },
 appBar:{
-    backgroundColor:"darkOrange",
-    boxShadow: "none",
+    backgroundColor:"#fff",
+    boxShadow: "none"
   },
   signin:{
     fill:'#000',
@@ -117,11 +111,16 @@ appBar:{
     }
   },
   logo:{
-    width:'60px',
-    height:'60px'
+    width:'100px',
+    height:'40px'
   },
   toolBar:{
     minHeight:'70px',
+    width:'90%',
+    marginLeft:'auto',
+    marginRight:'auto',
+    borderBottom:'1px solid lightgrey',
+    boxSizing: "border-box",
     [theme.breakpoints.down('sm')]: {
         minHeight:'65px',
       }
@@ -165,7 +164,7 @@ function SearchAppBar(props) {
     );
   return (
   <>
-    <div className={classes.root}>
+    <div className='componentContainer'>
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar className={classes.toolBar}>
           <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer" onClick={toggleDrawer}>

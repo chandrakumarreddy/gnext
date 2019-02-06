@@ -5,27 +5,38 @@ import ImageGallery from 'react-image-gallery';
 import { withStyles } from "@material-ui/core/styles";
 // import ReactImageZoom from "react-image-zoom";
 import computers from "../../resources/Products/computers.jpg";
-import c1 from "../../resources/Products/c1.jpg";
 import c2 from "../../resources/Products/c2.jpg";
+import c1 from "../../resources/Products/c1.jpg";
 import "./index.css";
 
 const styles = theme => ({
+	productid:{
+		fontSize:'12px',
+		paddingLeft:'5px',
+		color:'#333',
+		verticalAlign:'middle'
+	},
 	addToCart: {
 		textTransform: "capitalize",
-		backgroundColor: "yellow",
+		backgroundColor: "#0084CD",
 		border: "none",
-		color: "#000",
+		color: "#fff",
 		width: "100%",
 		margin: "10px 0",
 		fontSize: "12px",
 		boxShadow: "none",
-		outline: "none"
+		outline: "none",
+		fill:'#fff',
+		'&:hover':{
+			backgroundColor:"0084CD"
+		}
 	},
 	checkout: {
 		textTransform: "capitalize",
 		color: "#000",
 		margin: "10px 0",
-		width: "100%"
+		width: "100%",
+		fill:'#000'
 	}
 });
 
@@ -35,12 +46,12 @@ const images = [
         thumbnail: computers
       },
       {
-        original: c1,
-        thumbnail: c1
-      },
-      {
         original: c2,
         thumbnail: c2
+      },
+      {
+        original: c1,
+        thumbnail: c1
       }
     ]
 
@@ -68,30 +79,32 @@ const ProductDetailComponent = props => {
 					<p>Store Pickup: Available for pickup today at Aiea.</p>
 					<p>Act Quick – Only 2 left at your store!</p>
 					<p>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-						>
-							<path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-						</svg>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-						>
-							<path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-						</svg>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-						>
-							<path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-						</svg>
+						<span className='rated'>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+							>
+								<path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+							</svg>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+							>
+								<path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+							</svg>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+							>
+								<path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+							</svg>
+						</span>	
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="24"
