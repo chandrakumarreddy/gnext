@@ -1,22 +1,99 @@
 import React from "react";
-import Promotions from "../Promotions";
-import Header from '../Header';
-import Navigation from '../Navigation';
-import HeroContentBlock from "../HeroContentBlock";
+import { Grid, Button } from "@material-ui/core";
+import { withStyles } from "@material-ui/core/styles";
+import Featured from "../Featured";
+import f1 from "../../resources/featuredproducts/f1.jpeg";
+import f2 from "../../resources/featuredproducts/f2.jpeg";
+import f3 from "../../resources/featuredproducts/f3.jpeg";
+import f4 from "../../resources/featuredproducts/f4.jpeg";
+import "./index.css";
+
+const styles = theme => ({
+  HomeComponent: {
+    padding: "60px 0px 10px 0px",
+    boxSizing:'border-box',
+    [theme.breakpoints.down("sm")]: {
+      padding: "5px 10px 5px 10px"
+    }
+  },
+  itemContainer: {
+    position: "relative"
+  },
+  featuredproducts: {
+    marginBottom: "20px"
+  }
+});
 
 const HomeComponent = props => {
-	return (
-		<div>
-			<Promotions />
-			<Header/>
-			<Navigation/>
-			<div className="row">
-			<div className="col-lg-8">
-					<HeroContentBlock />
-			</div>
-			</div>
-		</div>
-	);
+  const { classes } = props;
+  return (
+    <div className={`${classes.HomeComponent} componentContainer`}>
+      <Grid container>
+        <Grid item lg={12} xs={12}>
+          <Featured />
+        </Grid>
+      </Grid>
+      <h3 className="featuredProductsHeading">Featured products</h3>
+      <Grid container spacing={32} className={classes.featuredproducts}>
+        <Grid lg={3} sm={3} xs={6} item className={classes.itemContainer}>
+          <div className="imagewrapper">
+            <img src={f1} alt="featured-01" />
+            <div className="featuredProductButton">
+              <Button variant="outlined" className={classes.button}>
+                view
+              </Button>
+            </div>
+            <section className="featuredProductContent">
+              <p>Apple iCam</p>
+              <p>$1300.00</p>
+            </section>
+          </div>
+        </Grid>
+        <Grid lg={3} sm={3} xs={6} item className={classes.itemContainer}>
+          <div className="imagewrapper">
+            <img src={f2} alt="featured-02" />
+            <div className="featuredProductButton">
+              <Button variant="outlined" className={classes.button}>
+                view
+              </Button>
+            </div>
+            <section className="featuredProductContent">
+              <p>HTC One M8 Android L 5.0 Lollipop</p>
+              <p>$245.00</p>
+            </section>
+          </div>
+        </Grid>
+        <Grid lg={3} sm={3} xs={6} item className={classes.itemContainer}>
+          <div className="imagewrapper">
+            <img src={f3} alt="featured-03" />
+            <div className="featuredProductButton">
+              <Button variant="outlined" className={classes.button}>
+                view
+              </Button>
+            </div>
+            <section className="featuredProductContent">
+              <p>Portable loud speaker</p>
+              <p>$745.00</p>
+            </section>
+          </div>
+        </Grid>
+        <Grid lg={3} sm={3} xs={6} item className={classes.itemContainer}>
+          <div className="imagewrapper">
+            <img src={f4} alt="featured-04" />
+            <div className="featuredProductButton">
+              <Button variant="outlined" className={classes.button}>
+                view
+              </Button>
+            </div>
+            <section className="featuredProductContent">
+              <p>Custom T-shirt</p>
+              <p>$245.00</p>
+            </section>
+          </div>
+        </Grid>
+      </Grid>
+    </div>
+  );
 };
 
-export default HomeComponent;
+export default withStyles(styles)(HomeComponent);

@@ -1,5 +1,10 @@
 ## Lot of effot has been put in developing site.
 
-##### copyrights
+# copyright
 
-> author- Chandra kumar reddy penugonda
+-Author: Chandra kumar reddy penugonda
+
+-access the site at http://sulky-death.surge.sh
+
+###### lastupdated: 08/02/2019-07:45AM
+
